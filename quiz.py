@@ -1,6 +1,6 @@
 import csv
 
-QUIZ_FILE = questions.csv
+QUIZ_FILE = "questions.csv"
 
 def read_questions(csv_file):
     questions = []
@@ -18,3 +18,11 @@ def read_questions(csv_file):
                     continue 
                 questions.append((question_text, answer_bool))
     return questions
+
+
+def main():
+    questions = read_questions(QUIZ_FILE)
+
+
+if __name__ == "__main__":
+    main()
