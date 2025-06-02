@@ -26,9 +26,9 @@ def run_quiz(questions):
         print(f"\nQuestion {i}: {question}")
         user_input = input("Answer (true/false): ").strip().lower()
         
-        if user_input == True:
+        if user_input == "true":
             user_answer = True
-        elif user_input == False:
+        elif user_input == "false":
             user_answer = False
         else:
             print("Incorrect aswer!")
@@ -38,7 +38,7 @@ def run_quiz(questions):
             print("Correct answer!")
             score += 1
         else:
-            print("Incorrect answer")
+            print("Incorrect answer!")
     print(f"\nYour Score: {score} / {len(questions)}")
 
 
