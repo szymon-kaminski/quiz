@@ -24,15 +24,22 @@ def run_quiz(questions):
     score = 0
     for i, (question, correct_answer) in enumerate(questions, start=1):
         print(f"\nQuestion {i}: {question}")
-        user_input = input("Answer (true/false): ").strip().lower()
+        user_input = input("Answer ('true/false' or 'skip' or 'exit'): ").strip().lower()
         
-        if user_input == "true":
-            user_answer = True
-        elif user_input == "false":
-            user_answer = False
-        else:
-            print("Incorrect aswer!")
-            continue
+        match user_input:
+            case "skip":
+                print("Skipping to the next question...\n")
+                continue
+            case "exit":
+                print("Exiting the quiz.")
+                break
+            case "true":
+                user_answer = True
+            case "false":
+                user_answer = False
+            case _:
+                print("Incorrect aswer!")
+                continue
 
         if user_answer == correct_answer:
             print("Correct answer!")
