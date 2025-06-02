@@ -20,15 +20,15 @@ def read_questions(csv_file):
     return questions
 
 
-def read_quiz(questions):
+def run_quiz(questions):
     score = 0
     for i, (question, correct_answer) in enumerate(questions, start=1):
-        print(f"\nQuestion {i}: {qusetion}")
+        print(f"\nQuestion {i}: {question}")
         user_input = input("Answer (true/false): ").strip().lower()
         
-        if user_input == true:
+        if user_input == True:
             user_answer = True
-        elif user_input == false:
+        elif user_input == False:
             user_answer = False
         else:
             print("Incorrect aswer!")
