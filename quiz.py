@@ -44,6 +44,7 @@ def read_quiz(questions):
 
 def main():
     questions = read_questions(QUIZ_FILE)
+    run_quiz(questions)
 
 
 if __name__ == "__main__":
