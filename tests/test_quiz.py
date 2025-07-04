@@ -12,3 +12,14 @@ def test_read_questions_returns_expected_output():
     ]
     result = read_questions(test_file)
     assert result == expected
+
+
+def test_read_questions_should_fail():
+    test_file = "tests/test_questions.csv"
+    wrong_expected = [
+        ("Is Python a snake?", False),  # <--- celowo zła odpowiedź
+        ("Is the sky green?", True)     # <--- celowo zła odpowiedź
+    ]
+    result = read_questions(test_file)
+    assert result == wrong_expected
+
