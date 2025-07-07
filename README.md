@@ -1,5 +1,7 @@
 # Quiz App in Python
 
+![CI](https://github.com/szymon-kaminski/quiz/actions/workflows/python-tests.yml/badge.svg)
+
 This is a simple command-line quiz app that reads true/false questions from a CSV file and allows the user to interactively answer them.
 
 ### Task Description
