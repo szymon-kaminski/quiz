@@ -39,4 +39,4 @@ def test_run_quiz_with_mock_input(monkeypatch, capsys):
 
     output = capsys.readouterr().out
 
-    assert "Your score: 2 / 2" in output
+    assert "Your Score: 2 / 2" in output
